@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiper Button Example</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    /* Custom styles for buttons */
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 10;
+    }
+    .swiper-button-prev {
+      left: 10px;
+    }
+    .swiper-button-next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Swiper Container -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <ul class="swiper-wrapper character__page--render swiper-pagination-custom" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+        <ul class="swiper-wrapper character__page--render swiper-pagination-custom" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);"><li class="swiper-slide swiper-slide-thumb-active swiper-slide-visible swiper-slide-active" style="width: 110px; margin-right: 34px;"><img src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210715/2021071516532990350.png" draggable="false"> <p>Kamisato Ayaka</p></li><li class="swiper-slide swiper-slide-visible swiper-slide-next" style="width: 110px; margin-right: 34px;"><img src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210622/2021062217445040081.png" draggable="false"> <p>Kaedehara Kazuha</p></li><li class="swiper-slide swiper-slide-visible" style="width: 110px; margin-right: 34px;"><img src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210730/2021073011351978058.png" draggable="false"> <p>Yoimiya</p></li><li class="swiper-slide swiper-slide-visible" style="width: 110px; margin-right: 34px;"><img src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210730/2021073014304594779.png" draggable="false"> <p>Sayu</p></li><li class="swiper-slide swiper-slide-visible" style="width: 110px; margin-right: 34px;"><img src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210818/2021081811214637697.png" draggable="false"> <p>Raiden Shogun</p></li><li class="swiper-slide swiper-slide-visible" style="width: 110px; margin-right: 34px;"><img src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210818/2021081815223814593.png" draggable="false"> <p>Kujou Sara</p></li><li class="swiper-slide" style="width: 110px; margin-right: 34px;"><img src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210909/2021090910071932878.png" draggable="false"> <p>Sangonomiya Kokomi</p></li><li class="swiper-slide" style="width: 110px; margin-right: 34px;"><img src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20211021/2021102111162752987.png" draggable="false"> <p>Thoma</p></li><li class="swiper-slide" style="width: 110px; margin-right: 34px;"><img src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20211203/2021120310384694932.png" draggable="false"> <p>Arataki Itto</p></li><li class="swiper-slide" style="width: 110px; margin-right: 34px;"><img src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20211203/2021120311003146616.png" draggable="false"> <p>Gorou</p></li><li class="swiper-slide" style="width: 110px; margin-right: 34px;"><img src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20220208/2022020810270373393.png" draggable="false"> <p>Yae Miko</p></li><li class="swiper-slide" style="width: 110px; margin-right: 34px;"><img src="https://webstatic.hoyoverse.com/upload/contentweb/2022/03/22/6713b70c875d723eb22c9effda407377_3450569287117483156.png" draggable="false"> <p>Kamisato Ayato</p></li><li class="swiper-slide" style="width: 110px; margin-right: 34px;"><img src="https://webstatic.hoyoverse.com/upload/contentweb/2022/06/14/d9e1610f9201fd4d5e8ca93c21380485_3143069182364603204.png" draggable="false"> <p>Kuki Shinobu</p></li><li class="swiper-slide" style="width: 110px; margin-right: 34px;"><img src="https://webstatic.hoyoverse.com/upload/contentweb/2022/07/05/8cb39b11a39045288b7ef800b9c8a085_5614260264118012404.png" draggable="false"> <p>Shikanoin Heizou</p></li><li class="swiper-slide" style="width: 110px; margin-right: 34px;"><img src="https://webstatic.hoyoverse.com/upload/op-public/2023/05/11/968ccf69c47165ea873b948f3b03d06c_6903872076186376698.png" draggable="false"> <p>Kirara</p></li></ul>
+      </ul>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+  <script>
+    // Initialize Swiper
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
